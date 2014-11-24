@@ -2,6 +2,10 @@
 .iLoading {
     font-size: 3em;
 }
-.iLoading .icon {
-
+.logreg .tabs {
+    top: 0;
+}
+.logreg .pane {
+    top: 50px;
+    padding: 20px;
 }

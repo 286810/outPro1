@@ -1,11 +1,28 @@
 angular.module('starter.controllers', [])
 
-    .controller('MainCtrl',function($rootScope,$ionicLoading,Items){
-        $rootScope.loadingIndication = $ionicLoading.show({
+    .controller('MainCtrl',function($scope,$rootScope,$ionicLoading,$ionicModal,Items){
+        /*$rootScope.loadingIndication = $ionicLoading.show({
             template: '<i class="icon ion-loading-a iLoading"></i>',
             animation: 'fade-in',
             showBackdrop: true
+        });*/
+
+        $ionicModal.fromTemplateUrl('logreg.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.modal = modal;
+            $scope.modal.show();
+
         });
+        $scope.openModal = function() {
+            $scope.modal.show();
+        };
+
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
+
     })
     .controller('DashCtrl', function($scope,$rootScope,$http,$ionicLoading,Items) {
         if(!localStorage.getItem('items')){

@@ -35,5 +35,55 @@
 
     </ion-nav-view>
 
+    <script id="logreg.html" type="text/ng-template">
+      <ion-modal-view class="logreg">
+
+            <ion-tabs class="tabs-positive tabs-icon-only">
+
+              <ion-tab title="登录">
+                <div class="list">
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">账号</span>
+                    <input type="text" placeholder="账号">
+                  </label>
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">密码</span>
+                    <input type="password" placeholder="密码">
+                  </label>
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">验证码</span>
+                    <input type="text" class="col-33" placeholder="验证码" style="float: left;">
+                    <img src="res/authcode.php" refresh-code title="点击换一个" />
+                  </label>
+                </div>
+                <p class="padding">
+                  <button class="button button-block button-positive">登录</button>
+                </p>
+              </ion-tab>
+
+              <ion-tab title="注册">
+                <div class="list">
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">手机</span>
+                    <input type="text" placeholder="手机">
+                  </label>
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">邮箱</span>
+                    <input type="text" placeholder="邮箱">
+                  </label>
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">密码</span>
+                    <input type="text" placeholder="密码">
+                  </label>
+                </div>
+                <p class="padding">
+                  <button class="button button-block button-positive">注册</button>
+                </p>
+              </ion-tab>
+
+            </ion-tabs>
+
+      </ion-modal-view>
+    </script>
   </body>
 </html>
